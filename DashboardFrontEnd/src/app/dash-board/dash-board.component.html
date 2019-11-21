@@ -1,0 +1,12 @@
+<form [formGroup]="dashboardForm" ng-submit="save()">
+  <mat-icon id="close-icon" (click)="closeDialog()" class="close">
+    <button type="button">X</button>
+  </mat-icon>
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name">
+  </mat-form-field><br/>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Description" formControlName="description">
+  </mat-form-field><br />
+  <button mat-button class="add" (click)="save()" type="submit" class="add">Save</button>
+</form>

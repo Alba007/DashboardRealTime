@@ -1,0 +1,132 @@
+.bigDiv {
+    height: 96vh ;
+    width: 99vw ;
+    background-color:#585353;
+    color:white ;
+    overflow: hidden;
+    
+    }
+.div1{
+    height: 30px;
+    width: -webkit-fill-available;
+    background-color: #878383 ;
+    color:white ;
+    position: relative ;
+    left:8px ;
+    top:15px; 
+    margin-right: 2px;
+    display: inline-block;
+  
+
+}
+
+.title{
+  position: relative;
+  
+   top:10px;
+}
+
+.add{
+    float: right;
+    background-color: #a3999a ;
+    border: none;
+    color:  white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+.listPart{
+     position: relative;
+     left:50px; 
+     height: -webkit-fill-available;
+     width: 46% ;
+     background-color: #878383;
+     margin-right: 30px ;
+     display: inline-block
+}
+.dashboardPart{
+     position: relative;
+     height: -webkit-fill-available;
+     width:  46% ;
+     background-color: #878383  ;
+     left:-50px;
+     float:right;
+     
+} 
+.dashbord {
+    color:black ;
+    position: relative;
+    top:30px; 
+    left:9px ;
+    width: 675px; 
+    height:303px;
+    background-color: #ECECEC ;
+    margin-bottom: 4px ;
+    display: inline block;
+    border-radius:4px;
+}
+
+.settings{
+    background:url(../assets/gear.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:20px;
+    height:20px;
+    position: relative;
+    left: 550px ;
+    top:4px;
+}
+.addButton{
+    background:url(../assets/add.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:20px;
+    height:20px;
+    position: relative;
+    left: 550px ;
+    top:4px;
+}
+   canvas{
+        max-width: 300px;
+        background-color:#f2ece8 ;
+        height: 130px !important;
+        display: unset !important;
+        margin-right: 10px ;
+        margin-bottom: 5px;
+        border : 2px;
+        border:grey 0.5px solid;
+        padding-left: 0 ;
+        position: relative;
+        top:4px ;
+        left:31px;
+        background-color:#FFDCDC
+       
+    }
+.test{
+   background-color:#585353 ;
+   color:white;
+   border-radius: 3px;
+   font-weight: bold ;
+}
+.deleteDash{
+    background:url(../assets/rubbish-bin-delete-button.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:20px;
+    height:20px;
+    position: relative;
+    left: 550px ;
+    top:4px;
+
+}
+
+.grabber {
+  cursor: col-resize;
+  position: absolute;
+  background-color: lightgray;
+  width: 3px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}

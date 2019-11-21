@@ -1,0 +1,22 @@
+.close {
+    float:right ;
+}
+
+.add {
+    background-color: #1F7F45; 
+    border: none;
+    color: white;
+    padding: 2px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .dashboard {
+    color: white;
+    padding: 2px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

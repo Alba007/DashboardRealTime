@@ -1,0 +1,36 @@
+<form [formGroup]="sensorForm" ng-submit="save()">
+  <mat-icon id="close-icon" (click)="closeDialog()" class="close"><button type="button">X</button></mat-icon>
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name">
+  </mat-form-field><br />
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Description" formControlName="description">
+  </mat-form-field><br />
+
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput placeholder="Latitude" formControlName="latitude">
+  </mat-form-field><br />
+  
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput placeholder="Longitude" formControlName="longitude">
+  </mat-form-field><br />
+
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput placeholder="Work Time" formControlName="workTime">
+  </mat-form-field><br />
+
+<mat-form-field class="example-full-width">
+  <input type="number" matInput placeholder="Temperature" formControlName="temperature">
+</mat-form-field><br />
+
+<mat-form-field class="example-full-width">
+  <input type="number" matInput placeholder="Humidity" formControlName="humidity">
+</mat-form-field><br />
+
+<mat-form-field class="example-full-width">
+  <input type="number" matInput placeholder="Temp force" formControlName="tempForceing">
+</mat-form-field><br />
+
+  <button  mat-button class="add" (click)="save()" type="submit" class="add">Save</button>
+</form>

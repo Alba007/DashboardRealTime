@@ -1,0 +1,39 @@
+<div class="bigDiv">
+ <div class="div1">
+    &nbsp;&nbsp;<span class="title">List of Sensors  |</span>&nbsp;&nbsp;<span class="title">Project Dashboard</span>
+</div ><br/><br/><br />
+<div class="listPart"
+      mwlResizable
+      #foto [style.width.px]="foto.getBoundingClientRect().width"
+      [enableGhostResize]="true"
+      [resizeEdges]="{bottom: true, right: true, top: true, left: true}" 
+      >
+      <app-sensors-list></app-sensors-list>
+</div>&nbsp;&nbsp;
+<div class="dashboardPart" >
+    <button mat-button class="add" (click)=" AddDash()">+ Add</button>
+    <div class="dashbord" *ngFor="let dash of dashboardChart; let dashb of dashObj; let showDash of delete_dash  ; let i= index" 
+    cdkDropList 
+    (cdkDropListDropped)="drop($event)" 
+    [cdkDropListData]="dash">
+      <div class="test">
+        &nbsp;&nbsp;{{dashObj[i].name}}
+        <button class="deleteDash" *ngIf="delete_dash[i]" (click)="deleteDash(dashObj[i].id)"></button>&nbsp;
+        <button class="settings" (click)="edit(dashObj[i])"></button>&nbsp;
+        <button class="addButton" (click)="addChart(dashObj[i])"></button> 
+      </div>
+      <canvas  class="style" *ngFor="let graph of dash"
+           baseChart 
+           [datasets]="graph.barChartData" 
+           [labels]="graph.barChartLabels" 
+           [chartType]="graph.type"
+           [legend]="chartLegend"
+           cdkDrag
+           cdkDragBoundary=".dashbord"
+           (dblclick)="openPopup(graph)">
+           <button class="deleteDash"></button>&nbsp;
+      </canvas>
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,44 @@
+
+    <button mat-button (click)="add()">+ Add</button>
+    <input   class="search" type="text" placeholder="Search" (keyup)="filter($event)">
+
+  <table mat-table [dataSource]="sensor" class="table">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let sensor"> {{sensor.name}} </td>
+    </ng-container>
+    <!-- model Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let sensor"> {{sensor.description}} </td>
+    </ng-container>
+    <!-- resolution Column -->
+    <ng-container matColumnDef="gpsData">
+      <th mat-header-cell *matHeaderCellDef> Gps data </th>
+      <td mat-cell *matCellDef="let sensor"> {{sensor.gpsData}} </td>
+    </ng-container>
+    <!-- ip Column -->
+    <ng-container matColumnDef="workTime">
+      <th mat-header-cell *matHeaderCellDef> Workime </th>
+      <td mat-cell *matCellDef="let sensor"> {{sensor.workTime}} </td>
+    </ng-container>
+      <ng-container matColumnDef="data">
+        <th mat-header-cell *matHeaderCellDef> Data </th>
+        <td mat-cell *matCellDef="let sensor"> {{sensor.data}} </td>
+      </ng-container>
+    <!-- action columns -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let sensor"> 
+        <ng-container matColumnDef="data">
+          <mat-icon id="close-icon" (click)="edit(sensor)" class="edit1"><button type="button" class="edit"></button></mat-icon>&nbsp;&nbsp;&nbsp;
+          <mat-icon id="close-icon" (click)="delete(sensor)" class="delete1"><button type="button"class="delete"></button></mat-icon>
+        </ng-container>
+        
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+      <mat-paginator class="mat-paginator-container"  [length]="100" [pageSize]="10" [pageSizeOptions]="[3, 10, 25, 100]">
+      </mat-paginator>
