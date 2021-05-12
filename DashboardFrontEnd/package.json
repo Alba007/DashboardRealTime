@@ -27,7 +27,7 @@
     "angular-resizable-element": "^3.2.4",
     "angular-resize-event": "^1.0.0",
     "bootstrap": "^4.3.1",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "core-js": "^2.5.4",
     "express": "^4.17.1",
     "leaflet": "^1.5.1",
